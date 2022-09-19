@@ -1,0 +1,20 @@
+.change {
+    width: 200px;
+    height: 200px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.hide {
+    display: none;
+}
+
+.border {
+    border: 10px solid black;
+}
