@@ -1,0 +1,26 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+/* Using a before on the paragraph element */
+/* Notice the double :: - this is the correct syntax */
+
+p::before {
+    content: 'before';
+    color: white;
+    background: red;
+    display: block;
+    font-size: 2rem;
+}
+
+p::after {
+    content: 'after';
+    color: white;
+    background: purple;
+    display: block;
+    font-size: 2rem;
+}
