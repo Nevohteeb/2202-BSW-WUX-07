@@ -1,0 +1,38 @@
+// Imports and partials at tops of sass
+@import 'font';
+@import 'colours';
+
+// Sass Variables
+// $primary-black: #333;
+// $primary-white: #f0f0f0;
+$tranisition-time: all 0.4s ease;
+
+body {
+    background-color: $primary-black;
+    color: $primary-white;
+}
+
+//Mixin
+@mixin spacing {
+    padding: 2rem;
+    margin: 2rem;
+}
+
+//Nesting
+.contact {
+
+    .info {
+        background-color: orange;
+        @include spacing;
+
+        //By using & I can pull in parent to name eg .info:hover
+        &:hover{
+            background-color: green;
+            transition: $tranisition-time;
+        }
+
+        h1 {
+            color: pink;
+        }
+    }
+}
