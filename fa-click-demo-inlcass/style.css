@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #56546d;
+}
+
+h2 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 2rem;;
+}
+
+.fa-bell {
+    font-size: 2em;
+    padding: 30px;
+    margin-right: 40px;
+    color: #464646;
+    border-radius: 20px;
+    transition: all 0.5 ease;
+    background: #56546d;
+    box-shadow: inset 20px 20px 60px #49475d,
+            inset -20px -20px 60px #63617d;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+.fa-heart {
+    font-size: 2em;
+    padding: 30px;
+    color: #464646;
+    border-radius: 20px;
+    transition: all 0.5 ease;
+    background: #56546d;
+    box-shadow: inset 20px 20px 60px #49475d,
+            inset -20px -20px 60px #63617d;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+.fa-bell:hover {
+    cursor: pointer;
+}
+
+.green {
+    color: rgb(4, 133, 36);
+    transition: all 0.5s ease;
+}
+
+.shake {
+    -webkit-animation-name: shake;
+    animation-name: shake;
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateY(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateY(-5px);}
+    20%, 40%, 60%, 80% {transform: translateY(5px);}
+}
+
+@-webkit-keyframes shake {
+    0%, 100% {transform: translateY(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateY(-5px);}
+    20%, 40%, 60%, 80% {transform: translateY(5px);}
+}
