@@ -1,0 +1,35 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 40px 60px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    background-image: url('mountains.jpg');
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center;
+}
