@@ -1,0 +1,4 @@
+.svg-clipped {
+    -webkit-clip-path: url(#svgPath);
+    clip-path: url(#svgPath);
+}
