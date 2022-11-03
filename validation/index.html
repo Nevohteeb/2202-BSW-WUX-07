@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="htmlValidation">
+        <input type="text" placeholder="Your Name" required maxlength="10">
+        <input type="email" placeholder="Your Email" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <form id="parsleyValidation">
+        <input type="text" placeholder="Your Name" data-parsley-required="true" data-parsley-pattern="^[a-zA-Z ]+" data-parsley-required-message="Please enter name using letters only" maxlength="10">
+        <input type="email" placeholder="Your Email" data-parsley-type="email" data-parsley-required="true" data-parsley-required-message="Enter an email fool">
+        <input type="number" placeholder="Age - minimum 10yo" minlength="10" data-parsley-required="true" data-parsley-min="10" data-parsley-required-message="Please enter an age over 10yo">
+        <input id="submitBtn" type="submit" value="Submit">
+    </form>
+  
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Parsley -->
+    <script src="parsley.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
