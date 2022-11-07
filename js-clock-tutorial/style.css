@@ -1,0 +1,121 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@200&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Antonio', sans-serif;
+}
+
+body {
+    background-color: #4f5692;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+h1{
+    color: antiquewhite;
+}
+
+h2 {
+    margin-bottom: 3rem;
+    color: antiquewhite;
+}
+
+.clock {
+    width: 400px;
+    height: 400px;
+    /* neumorphic boxshadow */
+    background: linear-gradient(145deg, #474d83, #555c9c);
+    box-shadow:  20px 20px 60px #43497c,
+             -20px -20px 60px #5b63a8;
+
+    /* make it circle */
+    border-radius: 50%;
+    
+    border: 5px solid black;
+    /* position realtive to allow us to postion absoulte the numbers & hands */
+    position: relative;
+}
+
+.clock .number {
+    /* set rotation variable to 0 by default */
+    --rotation: 0;
+    /* position absolute to allow us to place number in correct position */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center; /* will place all number at 12 o'clock */
+    transform: rotate(var(--rotation));
+    font-size: 2rem;
+    color: white;
+}
+
+/* Clock Number Positioning */
+.clock .number1 { --rotation: 30deg; }
+.clock .number2 { --rotation: 60deg; }
+.clock .number3 { --rotation: 90deg; }
+.clock .number4 { --rotation: 1200deg; }
+.clock .number5 { --rotation: 150deg; }
+.clock .number6 { --rotation: 180deg; }
+.clock .number7 { --rotation: 210deg; }
+.clock .number8 { --rotation: 240deg; }
+.clock .number9 { --rotation: 270deg; }
+.clock .number10 { --rotation: 300deg; }
+.clock .number11 { --rotation: 330deg; }
+
+.clock .hand {
+    /* Set rotation to default of 0 */
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    /* width: 10px;
+    height: 48%; */
+    background-color: black;
+    /* top left and right to only round the top */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* Transform origin to state where to start the roation from - default is center of div */
+    transform-origin: bottom;
+    /* Z-index to always be on top of the number */
+    z-index: 10;
+    /* Translate X to move hand back to the left to dead center it */
+    /* Rotate calc to turn it into the correct degrees of rotation */
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg)); 
+}
+
+/* Pseudo element for circle in center of clock */
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    left:  50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.clock .hand.second {
+    width: 5px;
+    height: 45%;
+    background-color: red;
+}
+
+.clock .hand.minute {
+    width:7px;
+    height: 40%;
+    background-color: black;
+}
+
+.clock .hand.hour {
+    width: 10px;
+    height: 35%;
+    background-color: black;
+}
