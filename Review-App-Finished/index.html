@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstraps CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center page-heading">Stewing Courgettes</h1>
+        <!-- Search strip -->
+        <div class="row justify-content-around mt-5">
+            <div class="col-6">
+                <div class="input-group">
+                    <input id="searchInput" type="search" class="form-control rounded" placeholder="Search Movie Titles" aria-label="Search" aria-describedby="search-addon" />
+                    <button id="searchBtn" type="button" class="btn">Search Movie</button>
+                </div>
+            </div>
+        </div>
+        <!-- Filtering Strip -->
+        <div class="row justify-content-around filter-strip">
+            <!-- Genre Select -->
+            <div class="col-3">
+                <select class="form-select" id="genreSelect">
+                    <option selected>Genre</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Sci-fi">Sci-fi</option>
+                    <option value="Action">Action</option>
+                </select>
+            </div>
+            <!-- Starring -->
+            <div class="col-3">
+                <select class="form-select" id="starringSelect">
+                    <option selected>Starring</option>
+                    <option value="Tom Cruise">Tom Cruise</option>
+                    <option value="Sam Neil">Sam Neil</option>
+                    <option value="Sigourney Weaver">Sigourney Weaver</option>
+                  </select>
+            </div>
+            <!-- Rating -->
+            <div class="col-3">
+                <select class="form-select" id="ratingSelect">
+                    <option selected>Rating</option>
+                    <option value="PG">PG</option>
+                    <option value="R">R</option>
+                    <option value="R16">R16</option>
+                  </select>
+            </div>
+            <!-- Clear Filter Button -->
+            <div class="col-3 d-flex justify-content-around">
+                <div class="col-4">
+                    <button class="btn" id="applyFilter">Apply Filters</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn" id="filterClear">Clear Filters</button>
+                </div>
+            </div>
+            
+        </div>
+        <!-- End of Filtering Strip -->
+
+        <!-- Movie Card Output Container -->
+        <div class="row movie-output" id="movieOutput">
+            <!-- Card One -->
+
+        </div>
+        <!-- End of movie output conatiner -->
+    </div>
+
+     <!-- Modal -->
+  <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" id="modalResult">
+        
+      </div>
+    </div>
+  </div>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c252db7e5f.js" crossorigin="anonymous"></script>
+    <!-- Bootstraps JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- Custom Js File -->
+    <script src="script.js"></script>
+</body>
+</html>
